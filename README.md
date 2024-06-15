@@ -1,4 +1,7 @@
+Note: this fork uses conda environment, and converts from using OpenAI to using open source models (eg. Llama 3) running on LM Studio OpenAI compaible API.
+
 # LLM-based Text Summarization: Novice to Maestro 🚀
+
 A comprehensive guide and codebase for text summarization harnessing the capabilities of Large Language Models (LLMs). Delve deep into techniques, from chunking to clustering, and maximize the potential of LLMs like GPT-3.5 and GPT-4.
 
 📄 **Article**: [I highly recommend reading this article before diving into the code.](https://sourajit16-02-93.medium.com/text-summarization-unleashed-novice-to-maestro-with-llms-and-instant-code-solutions-8d26747689c4)
@@ -17,9 +20,10 @@ A comprehensive guide and codebase for text summarization harnessing the capabil
     ```bash
     python3 -m spacy download en_core_web_sm
     ```
-4. **Set Up OpenAI API Key**: 
+4. **Set Up OpenAI API Key or BASE url**: 
     ```bash
     export OPENAI_API_KEY='sk-...'
+    export OPENAI_API_BASE='http://localhost:1234/v1'
     ```
 5. **Configure IO**: Navigate to `src/config.yaml` and update the `input_file` and `output_file` parameters under `io_config`.
 6. **File Handling**: For the input file, only `.txt` is accepted. For the output, `.json` is preferred. Place the input file in the `input` folder. The generated summary will be in the `output` folder.

@@ -16,13 +16,37 @@ Guidelines:
 - Missing entities can appear anywhere in the new summary.
 - Never drop entities from the previous summary. If space cannot be made, add fewer new entities. 
 Remember, use the exact same number of words for each summary.
-Answer in valid JSON. The JSON should be a python list (length 5) of dictionaries whose keys are "Missing_Entities" and "Denser_Summary"."""
+Answer in valid JSON format without any preamble. The JSON should be a python list (length 5) of dictionaries whose keys are "Missing_Entities" and "Denser_Summary".
+Example output:
+[
+ {
+  "Missing_Entities": "x",
+  "Denser_Summary": "y"
+ },
+ {
+  "Missing_Entities": "x",
+  "Denser_Summary": "y"
+ },
+ {
+  "Missing_Entities": "x",
+  "Denser_Summary": "y"
+ },
+ {
+  "Missing_Entities": "x",
+  "Denser_Summary": "y"
+ },
+ {
+  "Missing_Entities": "x",
+  "Denser_Summary": "y"
+ }
+]
+"""
 
 KW_EXTRACT_SYSTEM_PROMPT = """You are an efficient key word detector. Your task is to extract only all the important key words and phrases without any duplicates from the below chunk of text.
 
 Text: {text_chunk}
 
-Think "step by step" to identify and all the important key words and pharses only and output should be comma seperated.
+Think "step by step" to identify and all the important key words and pharses only and output should be comma seperated, without preamble.
 Important Keywords:"""
 
 SEQUENCIAL_SUMMARY_PROMPT = """You are an expert text summarizer. Given the below text content and the important key words, write a concise but information loaded summary.
@@ -31,10 +55,10 @@ Text Content: {text_chunk}
 
 Important Keywords: {key_words}
 
-Think "step by step" how to utilize both the important keywords and text content to create a great concise summary.
+Think "step by step" how to utilize both the important keywords and text content to create a great concise summary, without preamble.
 Summary:"""
 
 REDUCE_PROMPT = """The following is set of summaries:
 {doc_summaries}
-Take these and distill it into a final, consolidated summary.
+Take these and distill it into a final, consolidated summary, without preamble.
 Final Summary:"""

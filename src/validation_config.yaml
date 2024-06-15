@@ -10,6 +10,9 @@ llm_token_mapping:
   gpt-4-32k: 32768
   gpt-4-32k-0613: 32768
   text-embedding-ada-002: 8190
+  TheBloke/claude2-alpaca-13B-GGUF/claude2-alpaca-13b.Q8_0.gguf: 8192
+  nomic-ai/nomic-embed-text-v1.5-GGUF/nomic-embed-text-v1.5.Q8_0.gguf: 8192
+  lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF: 8192
 max_medium_token_length: 50000
 max_num_closest_points_per_cluster: 3
 output_file_valid_extn:

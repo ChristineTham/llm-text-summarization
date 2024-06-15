@@ -15,10 +15,9 @@ from map_reduce import MapReduce
 from cluster_summarization import ClusterBasedSummary
 
 # Load the .env file where the openAI token is set
-env_found = load_dotenv("/workspace/.env")
-if not env_found:
-    print("[WARN] The .env file is not found. Please ensure `OPENAI_API_KEY` environment variable is set properly!")
-
+# env_found = load_dotenv("/workspace/.env")
+# if not env_found:
+#     print("[WARN] The .env file is not found. Please ensure `OPENAI_API_KEY` environment variable is set properly!")
 
 def validate_configs(config_dict):
     validation_config_file_name = "validation_config.yaml"
